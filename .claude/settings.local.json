@@ -175,7 +175,26 @@
       "Bash(mkdir -p /tmp/merge-work)",
       "Bash(cd /tmp/merge-work git clone --depth=1 https://github.com/adrianstanca1/cortexbuildpro-deploy.git)",
       "Bash(/var/www/cortexbuild-ultimate/server/.env.example:*)",
-      "Bash(cd /tmp/merge-work git clone --depth=1 https://github.com/adrianstanca1/cortexbuildpro-ultimate.git)"
+      "Bash(cd /tmp/merge-work git clone --depth=1 https://github.com/adrianstanca1/cortexbuildpro-ultimate.git)",
+      "Bash(wc:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npm test:*)",
+      "Bash(PGPASSWORD=CortexBuild2024! psql -U cortexbuild -h 127.0.0.1 -d cortexbuild -c \"\\\\dt\")",
+      "Bash(PGPASSWORD=CortexBuild2024! psql -U cortexbuild -h 127.0.0.1 -d cortexbuild -c \"\\\\d audit_log\")",
+      "Bash(PGPASSWORD=CortexBuild2024! psql -U cortexbuild -h 127.0.0.1 -d cortexbuild -c \"\\\\d email_logs\")",
+      "Bash(find /var/www/cortexbuild-ultimate/server -name *.js)",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"SELECT id, email, password_hash, role, is_active FROM users LIMIT 5;\")",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"SELECT id, email, role, is_active FROM users LIMIT 5;\")",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"\\\\d users\")",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"SELECT id, email, role, LEFT\\(password_hash,20\\) as hash_preview FROM users;\")",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"SELECT email, password_hash FROM users WHERE email='adrian@cortexbuild.co.uk';\" 2>&1)",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"\nUPDATE users SET password_hash='\\\\$2b\\\\$10\\\\$O9UcFXW5VmoIv8kLHujk..GZfb44VDL5k1G4LV5mzgYgrbYyJKcq6' WHERE email='adrian@cortexbuild.co.uk';\n\")",
+      "Bash(pm2 env:*)",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"SELECT 1 as test;\")",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"SELECT current_user;\" 2>&1)",
+      "Bash(chown postgres:postgres /etc/postgresql/16/main/pg_hba.conf)",
+      "Bash(PGPASSWORD='CortexBuild2024!' psql -h 127.0.0.1 -U cortexbuild -d cortexbuild -c \"SELECT current_user;\")",
+      "Bash(git checkout:*)"
     ]
   }
 }
