@@ -1,0 +1,526 @@
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+Error: Cannot find module 'ws'
+Require stack:
+- /var/www/cortexbuild-ultimate/server/lib/websocket.js
+- /var/www/cortexbuild-ultimate/server/index.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+    at Hook._require.Module.require (/usr/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+    at require (node:internal/modules/helpers:147:16)
+    at Object.<anonymous> (/var/www/cortexbuild-ultimate/server/lib/websocket.js:6:19)
+    at Module._compile (node:internal/modules/cjs/loader:1705:14)
+    at Object..js (node:internal/modules/cjs/loader:1838:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/var/www/cortexbuild-ultimate/server/lib/websocket.js',
+    '/var/www/cortexbuild-ultimate/server/index.js'
+  ]
+}
+SyntaxError: Bad escaped character in JSON at position 64 (line 1 column 65)
+    at JSON.parse (<anonymous>)
+    at parse (/var/www/cortexbuild-ultimate/server/node_modules/body-parser/lib/types/json.js:92:19)
+    at /var/www/cortexbuild-ultimate/server/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at invokeCallback (/var/www/cortexbuild-ultimate/server/node_modules/raw-body/index.js:238:16)
+    at done (/var/www/cortexbuild-ultimate/server/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/var/www/cortexbuild-ultimate/server/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+SyntaxError: Bad escaped character in JSON at position 64 (line 1 column 65)
+    at JSON.parse (<anonymous>)
+    at parse (/var/www/cortexbuild-ultimate/server/node_modules/body-parser/lib/types/json.js:92:19)
+    at /var/www/cortexbuild-ultimate/server/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:214:14)
+    at invokeCallback (/var/www/cortexbuild-ultimate/server/node_modules/raw-body/index.js:238:16)
+    at done (/var/www/cortexbuild-ultimate/server/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/var/www/cortexbuild-ultimate/server/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+(node:39365) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+[auth/login] error: password authentication failed for user "cortexbuild"
+    at /var/www/cortexbuild-ultimate/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async /var/www/cortexbuild-ultimate/server/routes/auth.js:18:22 {
+  length: 107,
+  severity: 'FATAL',
+  code: '28P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'auth.c',
+  line: '331',
+  routine: 'auth_failed'
+}
+(node:40476) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:46948) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:48743) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)

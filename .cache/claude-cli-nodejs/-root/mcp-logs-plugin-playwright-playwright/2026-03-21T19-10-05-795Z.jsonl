@@ -1,0 +1,4 @@
+{"debug":"Starting connection with timeout of 30000ms","timestamp":"2026-03-21T19:10:07.217Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}
+{"debug":"Successfully connected to undefined server in 1391ms","timestamp":"2026-03-21T19:10:08.607Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}
+{"debug":"Connection established with capabilities: {\"hasTools\":true,\"hasPrompts\":false,\"hasResources\":false,\"hasResourceSubscribe\":false,\"serverVersion\":{\"name\":\"Playwright\",\"version\":\"0.0.68\"}}","timestamp":"2026-03-21T19:10:08.607Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}
+{"debug":"Channel notifications skipped: server did not declare claude/channel capability","timestamp":"2026-03-21T19:10:08.614Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}

@@ -1,0 +1,15 @@
+{
+  "integrations": {
+    "claude": {
+      "models": [
+        "qwen3.5:cloud"
+      ]
+    },
+    "openclaw": {
+      "models": [
+        "minimax-m2.7:cloud",
+        "deepseek-r1:7b"
+      ]
+    }
+  }
+}

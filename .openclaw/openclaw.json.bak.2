@@ -1,0 +1,120 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ollama/minimax-m2.7:cloud"
+      },
+      "workspace": "/root/.openclaw/workspace"
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "ownerDisplay": "raw",
+    "restart": true
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "5ec18be32969da4941754710d2eafc2eb9cc12ef920a1d58"
+    },
+    "bind": "loopback",
+    "mode": "local",
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "meta": {
+    "lastTouchedAt": "2026-03-21T19:16:33.538Z",
+    "lastTouchedVersion": "2026.3.13"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "ollama": {
+        "api": "ollama",
+        "apiKey": "ollama-local",
+        "baseUrl": "http://127.0.0.1:11434",
+        "models": [
+          {
+            "contextWindow": 204800,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "minimax-m2.7:cloud",
+            "input": [
+              "text"
+            ],
+            "name": "minimax-m2.7:cloud",
+            "reasoning": true
+          },
+          {
+            "contextWindow": 131072,
+            "cost": {
+              "cacheRead": 0,
+              "cacheWrite": 0,
+              "input": 0,
+              "output": 0
+            },
+            "id": "deepseek-r1:7b",
+            "input": [
+              "text"
+            ],
+            "maxTokens": 8192,
+            "name": "deepseek-r1:7b",
+            "reasoning": true
+          }
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "allow": [
+      "openclaw-web-search"
+    ],
+    "entries": {
+      "ollama": {
+        "enabled": true
+      },
+      "openclaw-web-search": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "openclaw-web-search": {
+        "installPath": "/root/.openclaw/extensions/openclaw-web-search",
+        "source": "npm",
+        "spec": "@ollama/openclaw-web-search"
+      }
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "alsoAllow": [
+      "ollama_web_search",
+      "ollama_web_fetch"
+    ],
+    "profile": "coding",
+    "web": {
+      "fetch": {
+        "enabled": false
+      },
+      "search": {
+        "enabled": false
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-21T19:16:33.528Z",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.3.13"
+  }
+}

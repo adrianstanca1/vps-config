@@ -1,0 +1,8 @@
+{
+  "id": "12",
+  "subject": "Fix modules batch A — Accounting, Procurement, CIS, SiteOps, Tenders, Analytics, FieldView, Drawings, Marketplace, PlantEquipment",
+  "description": "Read each module, fix field names, broken buttons, missing forms, hardcoded data",
+  "status": "pending",
+  "blocks": [],
+  "blockedBy": []
+}

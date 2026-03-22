@@ -1,0 +1,7 @@
+{"debug":"Initializing claude.ai proxy transport for server mcpsrv_01Rm2mdLuFJzT1PTuAZPm9ur","timestamp":"2026-03-21T21:46:34.458Z","sessionId":"cd0cc5dd-a173-476d-8100-7ecb3439cb80","cwd":"/root"}
+{"debug":"Using claude.ai proxy at https://mcp-proxy.anthropic.com/v1/mcp/mcpsrv_01Rm2mdLuFJzT1PTuAZPm9ur","timestamp":"2026-03-21T21:46:34.458Z","sessionId":"cd0cc5dd-a173-476d-8100-7ecb3439cb80","cwd":"/root"}
+{"debug":"claude.ai proxy transport created successfully","timestamp":"2026-03-21T21:46:34.458Z","sessionId":"cd0cc5dd-a173-476d-8100-7ecb3439cb80","cwd":"/root"}
+{"debug":"Starting connection with timeout of 30000ms","timestamp":"2026-03-21T21:46:34.464Z","sessionId":"cd0cc5dd-a173-476d-8100-7ecb3439cb80","cwd":"/root"}
+{"debug":"Successfully connected to claudeai-proxy server in 900ms","timestamp":"2026-03-21T21:46:35.358Z","sessionId":"cd0cc5dd-a173-476d-8100-7ecb3439cb80","cwd":"/root"}
+{"debug":"Connection established with capabilities: {\"hasTools\":true,\"hasPrompts\":true,\"hasResources\":false,\"hasResourceSubscribe\":false,\"serverVersion\":{\"name\":\"Vercel MCP Server\",\"version\":\"2\"}}","timestamp":"2026-03-21T21:46:35.358Z","sessionId":"cd0cc5dd-a173-476d-8100-7ecb3439cb80","cwd":"/root"}
+{"debug":"Channel notifications skipped: server did not declare claude/channel capability","timestamp":"2026-03-21T21:46:35.712Z","sessionId":"cd0cc5dd-a173-476d-8100-7ecb3439cb80","cwd":"/root"}

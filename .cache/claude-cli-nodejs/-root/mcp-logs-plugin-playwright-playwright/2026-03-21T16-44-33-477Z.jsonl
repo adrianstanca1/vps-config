@@ -1,0 +1,5 @@
+{"debug":"Starting connection with timeout of 30000ms","timestamp":"2026-03-21T16:44:35.065Z","sessionId":"21a966c6-d278-48b1-9bdf-d8f3c790cf8b","cwd":"/root"}
+{"error":"Server stderr: npm warn exec The following package was not found and will be installed: @playwright/mcp@0.0.68\n","timestamp":"2026-03-21T16:44:38.294Z","sessionId":"21a966c6-d278-48b1-9bdf-d8f3c790cf8b","cwd":"/root"}
+{"debug":"Successfully connected to undefined server in 3230ms","timestamp":"2026-03-21T16:44:38.294Z","sessionId":"21a966c6-d278-48b1-9bdf-d8f3c790cf8b","cwd":"/root"}
+{"debug":"Connection established with capabilities: {\"hasTools\":true,\"hasPrompts\":false,\"hasResources\":false,\"hasResourceSubscribe\":false,\"serverVersion\":{\"name\":\"Playwright\",\"version\":\"0.0.68\"}}","timestamp":"2026-03-21T16:44:38.294Z","sessionId":"21a966c6-d278-48b1-9bdf-d8f3c790cf8b","cwd":"/root"}
+{"debug":"Channel notifications skipped: server did not declare claude/channel capability","timestamp":"2026-03-21T16:44:38.303Z","sessionId":"21a966c6-d278-48b1-9bdf-d8f3c790cf8b","cwd":"/root"}

@@ -1,0 +1,15 @@
+{"debug":"Initializing HTTP transport to https://api.githubcopilot.com/mcp/","timestamp":"2026-03-21T17:27:25.214Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Node version: v24.3.0, Platform: linux","timestamp":"2026-03-21T17:27:25.214Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Environment: {\"NODE_OPTIONS\":\"not set\",\"UV_THREADPOOL_SIZE\":\"default\",\"HTTP_PROXY\":\"not set\",\"HTTPS_PROXY\":\"not set\",\"NO_PROXY\":\"not set\"}","timestamp":"2026-03-21T17:27:25.214Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Proxy options: default","timestamp":"2026-03-21T17:27:25.215Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"HTTP transport options: {\"url\":\"https://api.githubcopilot.com/mcp/\",\"headers\":{\"User-Agent\":\"claude-code/2.1.81 (cli)\",\"Authorization\":\"[REDACTED]\"},\"hasAuthProvider\":true,\"timeoutMs\":60000}","timestamp":"2026-03-21T17:27:25.215Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"HTTP transport created successfully","timestamp":"2026-03-21T17:27:25.215Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Client created, setting up request handler","timestamp":"2026-03-21T17:27:25.215Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Starting connection with timeout of 30000ms","timestamp":"2026-03-21T17:27:25.215Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Testing basic HTTP connectivity to https://api.githubcopilot.com/mcp/","timestamp":"2026-03-21T17:27:25.215Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Parsed URL: host=api.githubcopilot.com, port=default, protocol=https:","timestamp":"2026-03-21T17:27:25.215Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"No token data found","timestamp":"2026-03-21T17:27:25.224Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"HTTP Connection failed after 272ms: Streamable HTTP error: Error POSTing to endpoint: bad request: Authorization header is badly formatted\n (code: 400, errno: none)","timestamp":"2026-03-21T17:27:25.486Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"error":"Error: Streamable HTTP error: Error POSTing to endpoint: bad request: Authorization header is badly formatted\n\n    at send (/$bunfs/root/src/entrypoints/cli.js:2549:33631)\n    at processTicksAndRejections (native:7:39)","timestamp":"2026-03-21T17:27:25.486Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"debug":"Connection failed after 272ms: Streamable HTTP error: Error POSTing to endpoint: bad request: Authorization header is badly formatted\n","timestamp":"2026-03-21T17:27:25.486Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}
+{"error":"Connection failed: Streamable HTTP error: Error POSTing to endpoint: bad request: Authorization header is badly formatted\n","timestamp":"2026-03-21T17:27:25.486Z","sessionId":"6ec78367-c548-4d6d-b80c-ec1d30cc5bb2","cwd":"/root"}

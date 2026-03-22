@@ -1,0 +1,64 @@
+'Log files:
+/root/.npm/_logs/2026-03-22T04_24_22_894Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: @eslint/js@10.0.1
+Found: eslint@9.39.4
+node_modules/eslint
+  peer eslint@"^6.0.0 || ^7.0.0 || >=8.0.0" from @eslint-community/eslint-utils@4.9.1
+  node_modules/@eslint-community/eslint-utils
+    @eslint-community/eslint-utils@"^4.9.1" from @typescript-eslint/utils@8.57.1
+    node_modules/@typescript-eslint/utils
+      @typescript-eslint/utils@"8.57.1" from @typescript-eslint/eslint-plugin@8.57.1
+      node_modules/@typescript-eslint/eslint-plugin
+        dev @typescript-eslint/eslint-plugin@"^8.57.1" from the root project
+      @typescript-eslint/utils@"8.57.1" from @typescript-eslint/type-utils@8.57.1
+      node_modules/@typescript-eslint/type-utils
+        @typescript-eslint/type-utils@"8.57.1" from @typescript-eslint/eslint-plugin@8.57.1
+        node_modules/@typescript-eslint/eslint-plugin
+          dev @typescript-eslint/eslint-plugin@"^8.57.1" from the root project
+    @eslint-community/eslint-utils@"^4.8.0" from eslint@9.39.4
+  peer eslint@"^8.57.0 || ^9.0.0 || ^10.0.0" from @typescript-eslint/eslint-plugin@8.57.1
+  node_modules/@typescript-eslint/eslint-plugin
+    dev @typescript-eslint/eslint-plugin@"^8.57.1" from the root project
+  peer eslint@"^8.57.0 || ^9.0.0 || ^10.0.0" from @typescript-eslint/parser@8.57.1
+  node_modules/@typescript-eslint/parser
+    peer @typescript-eslint/parser@"^8.57.1" from @typescript-eslint/eslint-plugin@8.57.1
+    node_modules/@typescript-eslint/eslint-plugin
+      dev @typescript-eslint/eslint-plugin@"^8.57.1" from the root project
+    dev @typescript-eslint/parser@"^8.57.1" from the root project
+  peer eslint@"^8.57.0 || ^9.0.0 || ^10.0.0" from @typescript-eslint/type-utils@8.57.1
+  node_modules/@typescript-eslint/type-utils
+    @typescript-eslint/type-utils@"8.57.1" from @typescript-eslint/eslint-plugin@8.57.1
+    node_modules/@typescript-eslint/eslint-plugin
+      dev @typescript-eslint/eslint-plugin@"^8.57.1" from the root project
+  peer eslint@"^8.57.0 || ^9.0.0 || ^10.0.0" from @typescript-eslint/utils@8.57.1
+  node_modules/@typescript-eslint/utils
+    @typescript-eslint/utils@"8.57.1" from @typescript-eslint/eslint-plugin@8.57.1
+    node_modules/@typescript-eslint/eslint-plugin
+      dev @typescript-eslint/eslint-plugin@"^8.57.1" from the root project
+    @typescript-eslint/utils@"8.57.1" from @typescript-eslint/type-utils@8.57.1
+    node_modules/@typescript-eslint/type-utils
+      @typescript-eslint/type-utils@"8.57.1" from @typescript-eslint/eslint-plugin@8.57.1
+      node_modules/@typescript-eslint/eslint-plugin
+        dev @typescript-eslint/eslint-plugin@"^8.57.1" from the root project
+  peer eslint@"^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0" from eslint-plugin-react-hooks@7.0.1
+  node_modules/eslint-plugin-react-hooks
+    dev eslint-plugin-react-hooks@"^7.0.1" from the root project
+  dev eslint@"^9.39.4" from the root project
+
+Could not resolve dependency:
+peerOptional eslint@"^10.0.0" from @eslint/js@10.0.1
+node_modules/@eslint/js
+  dev @eslint/js@"*" from the root project
+
+Conflicting peer dependency: eslint@10.1.0
+node_modules/eslint
+  peerOptional eslint@"^10.0.0" from @eslint/js@10.0.1
+  node_modules/@eslint/js
+    dev @eslint/js@"*" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
