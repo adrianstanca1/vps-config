@@ -8,6 +8,14 @@
 # Claude MCP cache
 .cache/
 
+# Config directories
+.config/
+.docker/
+.wget-hsts
+
+# Project
+cortexbuild-work/
+
 # Node/nvm
 .local/
 .nvm/
