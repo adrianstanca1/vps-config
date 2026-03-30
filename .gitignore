@@ -4,6 +4,7 @@
 
 # Claude config
 .claude/
+.claude.json
 
 # Claude MCP cache
 .cache/
@@ -39,3 +40,6 @@ cortexbuild-work/
 # System
 .DS_Store
 *.log
+
+# Personal files
+CLAUDE.md
