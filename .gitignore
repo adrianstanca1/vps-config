@@ -5,6 +5,9 @@
 # Claude config
 .claude/
 
+# Claude MCP cache
+.cache/
+
 # Node/nvm
 .local/
 .nvm/
