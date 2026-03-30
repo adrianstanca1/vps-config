@@ -1,0 +1,30 @@
+# npm cache
+.npm/
+.npm/
+
+# Claude config
+.claude/
+
+# Node/nvm
+.local/
+.nvm/
+.node/
+
+# OpenClaw
+.openclaw/
+
+# SSH
+.ssh/
+
+# PM2
+.pm2/
+
+# Ollama
+.ollama/
+
+# Bash history
+.bash_history
+
+# System
+.DS_Store
+*.log
