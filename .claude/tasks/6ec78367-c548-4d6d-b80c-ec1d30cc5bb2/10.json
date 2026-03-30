@@ -1,8 +1,0 @@
-{
-  "id": "10",
-  "subject": "Settings module — full user management UI",
-  "description": "Wire Settings.tsx to /api/auth/users for full CRUD user management",
-  "status": "pending",
-  "blocks": [],
-  "blockedBy": []
-}

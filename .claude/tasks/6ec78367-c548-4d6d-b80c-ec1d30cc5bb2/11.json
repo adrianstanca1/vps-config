@@ -1,8 +1,0 @@
-{
-  "id": "11",
-  "subject": "AI assistant — expand to all 21 table intents",
-  "description": "Add intents for all remaining tables: materials, timesheets, subcontractors, equipment, change orders, purchase orders, contacts, rams, cis, daily reports, risk register",
-  "status": "pending",
-  "blocks": [],
-  "blockedBy": []
-}

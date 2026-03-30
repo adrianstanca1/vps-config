@@ -1,8 +1,0 @@
-{
-  "id": "4",
-  "subject": "Write design spec and get approval",
-  "description": "Full spec covering architecture, data layer, all 30 modules, persistence, and deployment",
-  "status": "completed",
-  "blocks": [],
-  "blockedBy": []
-}

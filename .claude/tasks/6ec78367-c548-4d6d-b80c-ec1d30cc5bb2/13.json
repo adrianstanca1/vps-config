@@ -1,8 +1,0 @@
-{
-  "id": "13",
-  "subject": "Fix modules batch B — Teams, Timesheets, Subcontractors, RAMS, RFIs, ChangeOrders, PunchList, Inspections, RiskRegister, Meetings, Materials, DailyReports, CRM",
-  "description": "Read each module, fix field names, broken buttons, missing forms, hardcoded data",
-  "status": "pending",
-  "blocks": [],
-  "blockedBy": []
-}

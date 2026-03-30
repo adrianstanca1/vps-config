@@ -1,8 +1,0 @@
-{
-  "id": "5",
-  "subject": "Implement full application with parallel agents",
-  "description": "Build database, backend, all 30 modules with real functionality using parallel subagents",
-  "status": "in_progress",
-  "blocks": [],
-  "blockedBy": []
-}
