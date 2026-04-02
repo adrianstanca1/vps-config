@@ -1,2 +1,7 @@
 [credential]
 	helper = !gh auth git-credential
+[safe]
+	directory = /root/cortexbuild-work
+[user]
+	name = Adrian Stanca
+	email = adrianstanca1@gmail.com
