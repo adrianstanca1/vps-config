@@ -24,6 +24,20 @@ cortexbuild-work/
 
 # OpenClaw
 .openclaw/
+.openclaw.pre-migration/
+
+# OpenCode
+.opencode/
+
+# Hermes agent
+.hermes/
+
+# Snap packages
+snap/
+
+# Node (root-level artifacts)
+package-lock.json
+node_modules/
 
 # SSH
 .ssh/
