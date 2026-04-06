@@ -16,6 +16,7 @@
 
 # Project
 cortexbuild-work/
+cortexbuild-backups/
 
 # Node/nvm
 .local/
