@@ -16,7 +16,6 @@
 
 # Project
 cortexbuild-work/
-cortexbuild-backups/
 
 # Node/nvm
 .local/
@@ -25,7 +24,6 @@ cortexbuild-backups/
 
 # OpenClaw
 .openclaw/
-.openclaw.pre-migration/
 
 # OpenCode
 .opencode/
@@ -58,3 +56,15 @@ node_modules/
 
 # Personal files
 CLAUDE.md
+AGENTS.md
+
+# Deploy scripts (root-level)
+deploy-api.sh
+deploy-frontend.sh
+
+# Agent workspaces
+.pi/
+.playwright-mcp/
+
+# Editor
+.viminfo
