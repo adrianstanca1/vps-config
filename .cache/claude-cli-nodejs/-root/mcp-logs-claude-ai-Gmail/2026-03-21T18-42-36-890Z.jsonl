@@ -1,7 +1,0 @@
-{"debug":"Initializing claude.ai proxy transport for server mcpsrv_01Pk8FcgkAEUL6PcrHMaFkJb","timestamp":"2026-03-21T18:42:38.646Z","sessionId":"afbf22e8-3087-48d8-99e5-a44603f2f0eb","cwd":"/root"}
-{"debug":"Using claude.ai proxy at https://mcp-proxy.anthropic.com/v1/mcp/mcpsrv_01Pk8FcgkAEUL6PcrHMaFkJb","timestamp":"2026-03-21T18:42:38.646Z","sessionId":"afbf22e8-3087-48d8-99e5-a44603f2f0eb","cwd":"/root"}
-{"debug":"claude.ai proxy transport created successfully","timestamp":"2026-03-21T18:42:38.646Z","sessionId":"afbf22e8-3087-48d8-99e5-a44603f2f0eb","cwd":"/root"}
-{"debug":"Starting connection with timeout of 30000ms","timestamp":"2026-03-21T18:42:38.646Z","sessionId":"afbf22e8-3087-48d8-99e5-a44603f2f0eb","cwd":"/root"}
-{"debug":"Successfully connected to claudeai-proxy server in 645ms","timestamp":"2026-03-21T18:42:39.291Z","sessionId":"afbf22e8-3087-48d8-99e5-a44603f2f0eb","cwd":"/root"}
-{"debug":"Connection established with capabilities: {\"hasTools\":true,\"hasPrompts\":false,\"hasResources\":false,\"hasResourceSubscribe\":false,\"serverVersion\":{\"name\":\"mcp-server-gmail\",\"version\":\"0.1.0\"}}","timestamp":"2026-03-21T18:42:39.291Z","sessionId":"afbf22e8-3087-48d8-99e5-a44603f2f0eb","cwd":"/root"}
-{"debug":"Channel notifications skipped: server did not declare claude/channel capability","timestamp":"2026-03-21T18:42:39.544Z","sessionId":"afbf22e8-3087-48d8-99e5-a44603f2f0eb","cwd":"/root"}

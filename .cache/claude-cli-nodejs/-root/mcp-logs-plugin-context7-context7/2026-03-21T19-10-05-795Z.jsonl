@@ -1,5 +1,0 @@
-{"debug":"Starting connection with timeout of 30000ms","timestamp":"2026-03-21T19:10:07.204Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}
-{"error":"Server stderr: Context7 Documentation MCP Server v2.1.4 running on stdio\n","timestamp":"2026-03-21T19:10:08.524Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}
-{"debug":"Successfully connected to undefined server in 1323ms","timestamp":"2026-03-21T19:10:08.524Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}
-{"debug":"Connection established with capabilities: {\"hasTools\":true,\"hasPrompts\":false,\"hasResources\":false,\"hasResourceSubscribe\":false,\"serverVersion\":{\"name\":\"Context7\",\"version\":\"2.1.4\"}}","timestamp":"2026-03-21T19:10:08.524Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}
-{"debug":"Channel notifications skipped: server did not declare claude/channel capability","timestamp":"2026-03-21T19:10:08.529Z","sessionId":"5956b8f6-33c5-4e44-97ae-b38a486d0756","cwd":"/root"}

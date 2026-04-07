@@ -1,3 +1,0 @@
-{"debug":"Starting connection with timeout of 30000ms","timestamp":"2026-03-21T02:18:30.523Z","sessionId":"8c45ffa0-016d-4a1f-905e-ec59522438f6","cwd":"/root"}
-{"debug":"Connection failed after 106ms: Executable not found in $PATH: \"npx\"","timestamp":"2026-03-21T02:18:30.628Z","sessionId":"8c45ffa0-016d-4a1f-905e-ec59522438f6","cwd":"/root"}
-{"error":"Connection failed: Executable not found in $PATH: \"npx\"","timestamp":"2026-03-21T02:18:30.628Z","sessionId":"8c45ffa0-016d-4a1f-905e-ec59522438f6","cwd":"/root"}
