@@ -1,6 +1,7 @@
-# npm cache
+# Package managers / caches
 .npm/
-.npm/
+.bun/
+.ollama-mcp-venv/
 
 # Claude config
 .claude/
@@ -13,6 +14,9 @@
 .config/
 .docker/
 .wget-hsts
+
+# Chrome
+.config/google-chrome/
 
 # Project
 cortexbuild-work/

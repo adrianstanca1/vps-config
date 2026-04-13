@@ -107,3 +107,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # OpenClaw Completion
 source "/root/.openclaw/completions/openclaw.bash"
+
+# === Local LLM Configuration (Ollama) ===
+export OLLAMA_HOST="http://127.0.0.1:11434"
+export OLLAMA_MODEL="qwen3.5:latest"
+export OPENAI_API_BASE="http://127.0.0.1:11434/v1"
+export OPENAI_API_KEY="ollama-local"
