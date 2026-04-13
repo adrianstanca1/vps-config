@@ -32,6 +32,9 @@ cortexbuild-work/
 # OpenCode
 .opencode/
 
+# Codex
+.codex/
+
 # Hermes agent
 .hermes/
 
@@ -62,9 +65,13 @@ node_modules/
 CLAUDE.md
 AGENTS.md
 
-# Deploy scripts (root-level)
+# Deploy/utility scripts (root-level)
 deploy-api.sh
 deploy-frontend.sh
+audit-vps.sh
+configure-local-llm.sh
+restart-status.sh
+update-vps.sh
 
 # Agent workspaces
 .pi/
