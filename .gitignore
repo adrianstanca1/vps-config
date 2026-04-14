@@ -64,17 +64,17 @@ node_modules/
 .DS_Store
 *.log
 
-# Personal files
-CLAUDE.md
-AGENTS.md
+# Personal files (tracked)
+# CLAUDE.md
+# AGENTS.md
 
-# Deploy/utility scripts (root-level)
-deploy-api.sh
-deploy-frontend.sh
-audit-vps.sh
-configure-local-llm.sh
-restart-status.sh
-update-vps.sh
+# Deploy/utility scripts (tracked)
+# deploy-api.sh
+# deploy-frontend.sh
+# audit-vps.sh
+# configure-local-llm.sh
+# restart-status.sh
+# update-vps.sh
 
 # Agent workspaces
 .pi/
