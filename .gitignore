@@ -13,6 +13,9 @@
 # Config directories
 .config/
 .docker/
+
+# Systemd user units (track openclaw-gateway.service here)
+systemd/
 .wget-hsts
 
 # Chrome
