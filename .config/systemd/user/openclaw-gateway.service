@@ -1,12 +1,15 @@
 [Unit]
-Description=OpenClaw Gateway (v2026.4.1)
+Description=OpenClaw Gateway (v2026.4.11)
 After=network-online.target
 Wants=network-online.target
+StartLimitBurst=5
+StartLimitIntervalSec=60
 
 [Service]
-ExecStart=/usr/bin/node /usr/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+ExecStart=/usr/bin/node /root/.nvm/versions/node/v24.14.0/lib/node_modules/openclaw/dist/index.js gateway --port 18789
 Restart=always
 RestartSec=5
+RestartPreventExitStatus=78
 TimeoutStopSec=30
 TimeoutStartSec=30
 SuccessExitStatus=0 143
@@ -20,7 +23,7 @@ Environment=OPENCLAW_SYSTEMD_UNIT=openclaw-gateway.service
 Environment="OPENCLAW_WINDOWS_TASK_NAME=OpenClaw Gateway"
 Environment=OPENCLAW_SERVICE_MARKER=openclaw
 Environment=OPENCLAW_SERVICE_KIND=gateway
-Environment=OPENCLAW_SERVICE_VERSION=2026.4.1
+Environment=OPENCLAW_SERVICE_VERSION=2026.4.11
 
 [Install]
 WantedBy=default.target

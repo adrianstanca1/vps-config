@@ -113,3 +113,6 @@ export OLLAMA_HOST="http://127.0.0.1:11434"
 export OLLAMA_MODEL="qwen3.5:latest"
 export OPENAI_API_BASE="http://127.0.0.1:11434/v1"
 export OPENAI_API_KEY="ollama-local"
+
+# Unset ANTHROPIC_AUTH_TOKEN to avoid conflict with apiKeyHelper (Ollama fallback)
+unset ANTHROPIC_AUTH_TOKEN
