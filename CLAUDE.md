@@ -136,7 +136,10 @@ Configured in `~/.claude/.mcp.json`:
 - **ollama**: Local LLM access via Python MCP server (4 tools: list models, generate code, reasoning, chat)
 - **postgres**: Direct database access via `mcp-postgres`
 
-## Login Credentials
+## Secret Handling
 
-- **App**: `superadmin@cortexbuild.com` / `CortexBuild2024!`
-- **DB**: `cortexbuild` / `CortexBuild2024!` (PostgreSQL)
+- Never store production app passwords, database passwords, API keys, access tokens, private keys, session cookies, or connection strings in this repository.
+- Keep production secrets in server-side environment files outside Git (for example, a root-owned or service-owned `.env` with restrictive permissions) or a dedicated secret manager.
+- Ensure secret files are excluded from Git before staging changes; review `git status` and staged diffs before every commit.
+- Credentials previously committed must be rotated. Removing a value from the current file does not remove it from Git history, forks, clones, caches, or search indexes.
+- Do not deploy default or example credentials to production.
