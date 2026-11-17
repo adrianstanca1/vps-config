@@ -17,6 +17,14 @@ Deploy scripts, utility scripts, and this file are gitignored — they exist on 
 - **`organization_id = NULL`** for `company_owner` users — routes filtering `WHERE organization_id = $1` will crash. Use `COALESCE(organization_id, company_id)` or handle NULL explicitly.
 - **Ollama models** are lost on container restart. Re-pull: `docker exec cortexbuild-ollama ollama pull qwen3.5:latest` and `docker exec cortexbuild-ollama ollama pull deepseek-r1:7b`. Other models: `gemma4:latest`, `qwen2.5:7b`, `nomic-embed-text:latest`.
 
+## Maintenance Safety
+
+- `update-vps.sh` is read-only by default. Use `--apply-os-updates` only for an explicitly scheduled Ubuntu package upgrade.
+- Never prune Docker volumes/images, truncate logs, or delete backups as part of routine updates. Inspect and retain recoverable data until a backup restore has been tested.
+- `deploy-api.sh` currently stops/removes the live API container before validating the replacement and does not fail closed after a failed health check. Do not use it for a production deployment until a staged health check and rollback path are implemented.
+- `configure-local-llm.sh` changes multiple user/application configurations. Ollama must remain bound to loopback/private Docker networking; do not expose ports 11434 or 11435 publicly without an authenticated gateway and firewall controls.
+- These production paths and service names describe an older host; verify the new one.com server independently before applying them.
+
 ## Production Infrastructure
 
 | Container | Port | Notes |
@@ -39,7 +47,7 @@ Most commands here run on the VPS at `/var/www/cortexbuild-ultimate/` (see its o
 bash /root/deploy-api.sh          # Full Docker rebuild + health check
 bash /root/deploy-frontend.sh     # git pull + npm ci + build + chown
 bash /root/audit-vps.sh          # Disk, logs, Docker, nginx, SSL audit
-bash /root/update-vps.sh         # System updates, Docker cleanup, log rotation
+bash /root/update-vps.sh --check # Read-only status check\nsudo bash /root/update-vps.sh --apply-os-updates # OS packages only; no Docker/data cleanup
 bash /root/configure-local-llm.sh  # Configure all AI tools to use local Ollama
 docker start cortexbuild-api      # Start stopped container
 docker restart cortexbuild-api    # Quick restart (no rebuild)

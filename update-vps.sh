@@ -1,179 +1,76 @@
-#!/bin/bash
-set -euo pipefail
+#!/usr/bin/env bash
+set -Eeuo pipefail
 
-echo "============================================"
-echo "  VPS Comprehensive Update & Cleanup"
-echo "  $(date)"
-echo "============================================"
+# Safe maintenance entrypoint. Default operation is read-only.
+# OS updates require explicit --apply-os-updates and never modify Docker data.
 
-# ─────────────────────────────────────────────────
-# 1. SYSTEM PACKAGES
-# ─────────────────────────────────────────────────
-echo ""
-echo "[1/8] Updating system packages..."
-apt-get update -qq
-DEBIAN_FRONTEND=noninteractive apt-get upgrade -y -qq 2>&1 | tail -5
-apt-get autoremove -y -qq 2>&1 | tail -3
-apt-get autoclean -qq 2>&1
-echo "  ✓ System packages updated"
+MODE="${1:---check}"
+log() { printf '[vps-maintenance] %s\n' "$*"; }
+die() { printf '[vps-maintenance] ERROR: %s\n' "$*" >&2; exit 1; }
 
-# ─────────────────────────────────────────────────
-# 2. DOCKER IMAGES
-# ─────────────────────────────────────────────────
-echo ""
-echo "[2/8] Pulling latest Docker images..."
-cd /var/www/cortexbuild-ultimate
-
-# Pull updated images
-docker compose pull 2>&1 | tail -10
-echo "  ✓ Docker images pulled"
-
-# ─────────────────────────────────────────────────
-# 3. DOCKER CLEANUP
-# ─────────────────────────────────────────────────
-echo ""
-echo "[3/8] Docker cleanup..."
-
-# Remove dangling volumes
-DANGLING=$(docker volume ls -f dangling=true -q 2>/dev/null)
-if [ -n "$DANGLING" ]; then
-    echo "  Removing dangling volumes: $DANGLING"
-    docker volume rm $DANGLING 2>/dev/null || true
-fi
-
-# Prune build cache
-docker builder prune -f 2>&1 | tail -3
-
-# Remove unused images (but keep ones in use)
-docker image prune -f 2>&1 | tail -3
-
-echo "  ✓ Docker cleaned up"
-
-# ─────────────────────────────────────────────────
-# 4. LOG CLEANUP
-# ─────────────────────────────────────────────────
-echo ""
-echo "[4/8] Cleaning up logs..."
-
-# PM2 logs (159MB error log is excessive)
-pm2 flush 2>/dev/null || true
-echo "  ✓ PM2 logs flushed"
-
-# Journal logs — keep only 7 days
-journalctl --vacuum-time=7d 2>&1 | tail -3
-
-# Truncate old Docker container logs
-for logfile in /var/lib/docker/containers/*/*-json.log; do
-    if [ -f "$logfile" ]; then
-        size=$(stat -c%s "$logfile" 2>/dev/null || echo 0)
-        if [ "$size" -gt 10485760 ]; then  # >10MB
-            truncate -s 0 "$logfile"
-            echo "  Truncated: $logfile"
-        fi
+case "$MODE" in
+  --check)
+    log 'Read-only status check; no changes will be made.'
+    printf '\nOS: '
+    if [[ -r /etc/os-release ]]; then . /etc/os-release; printf '%s\n' "${PRETTY_NAME:-unknown}"; else echo unknown; fi
+    printf '\nDisk usage:\n'
+    df -h /
+    printf '\nDocker containers:\n'
+    if command -v docker >/dev/null 2>&1; then
+      docker ps --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}' 2>/dev/null || true
+      docker system df 2>/dev/null || true
+    else
+      echo 'Docker is not installed.'
     fi
-done
-
-# Truncate old nginx logs
-for f in /var/log/nginx/*.log; do
-    if [ -f "$f" ]; then
-        truncate -s 0 "$f" 2>/dev/null
-    fi
-done
-nginx -s reopen 2>/dev/null || true
-
-echo "  ✓ Logs cleaned"
-
-# ─────────────────────────────────────────────────
-# 5. CLEAN STALE BACKUPS
-# ─────────────────────────────────────────────────
-echo ""
-echo "[5/8] Cleaning stale backups..."
-
-# Remove old cortexbuild backups (keep latest 2)
-BACKUP_DIR="/var/backups"
-cd "$BACKUP_DIR"
-BACKUP_COUNT=$(ls -d cortexbuild-* 2>/dev/null | wc -l)
-if [ "$BACKUP_COUNT" -gt 2 ]; then
-    ls -dt cortexbuild-* 2>/dev/null | tail -n +3 | while read dir; do
-        echo "  Removing old backup: $dir"
-        rm -rf "$BACKUP_DIR/$dir"
+    printf '\nService state:\n'
+    for service in ssh docker nginx fail2ban; do
+      printf '%-12s %s\n' "$service" "$(systemctl is-active "$service" 2>/dev/null || true)"
     done
-fi
+    printf '\nFirewall:\n'
+    ufw status 2>/dev/null || true
+    printf '\nJournal usage:\n'
+    journalctl --disk-usage 2>/dev/null || true
+    printf '\nBackup directory (names and metadata only):\n'
+    ls -ld --time-style=long-iso /var/backups/cortexbuild-* 2>/dev/null || echo 'No matching CortexBuild backups found.'
+    printf '\nNginx configuration test:\n'
+    if command -v nginx >/dev/null 2>&1; then nginx -t 2>&1 || true; else echo 'Nginx is not installed.'; fi
+    log 'CHECK_COMPLETE; no files, services, containers, volumes, logs, or backups were changed.'
+    ;;
 
-# Clean old .env backup files in production
-find /var/www/cortexbuild-ultimate -name ".env.bak.*" -mtime +7 -delete 2>/dev/null
+  --apply-os-updates)
+    [[ ${EUID} -eq 0 ]] || die 'Run OS updates as root.'
+    command -v flock >/dev/null 2>&1 || die 'flock is required.'
+    exec 9>/run/lock/vps-os-updates.lock
+    flock -n 9 || die 'Another OS update is already running.'
+    export DEBIAN_FRONTEND=noninteractive
+    log 'Applying apt package updates only. Docker images, containers, volumes, project dependencies, logs, and backups will not be pruned or deleted.'
+    apt-get update
+    apt-get upgrade -y
+    printf '\nReboot status:\n'
+    if [[ -f /var/run/reboot-required ]]; then
+      echo 'REBOOT_REQUIRED=yes'
+      cat /var/run/reboot-required.pkgs 2>/dev/null || true
+    else
+      echo 'REBOOT_REQUIRED=no'
+    fi
+    log 'OS package update command completed. Review service health and reboot requirements before scheduling a restart.'
+    ;;
 
-echo "  ✓ Stale backups cleaned"
+  --help|-h)
+    cat <<'HELP'
+Usage:
+  bash update-vps.sh                 Read-only status check (default)
+  sudo bash update-vps.sh --check    Read-only status check
+  sudo bash update-vps.sh --apply-os-updates
+                                     Apply Ubuntu apt upgrades only
 
-# ─────────────────────────────────────────────────
-# 6. CLEAN TEMP & CACHE
-# ─────────────────────────────────────────────────
-echo ""
-echo "[6/8] Cleaning temp files and caches..."
+This script never prunes Docker resources, removes backups, truncates logs,
+changes Node dependencies, pulls/recreates application containers, or restarts
+production application services.
+HELP
+    ;;
 
-# Clean apt cache
-apt-get clean -qq
-
-# Clean npm cache
-npm cache clean --force 2>/dev/null || true
-
-# Remove the wget download if still running (it's a duplicate of what Ollama already has)
-WGET_PID=$(pgrep -f "wget.*Meta-Llama" 2>/dev/null || true)
-if [ -n "$WGET_PID" ]; then
-    kill "$WGET_PID" 2>/dev/null || true
-    echo "  Killed stale wget download"
-fi
-
-# Clean old llama.cpp tarball
-rm -f /root/llama-cpp/llama-ubuntu-x64.tar.gz 2>/dev/null
-
-echo "  ✓ Temp files cleaned"
-
-# ─────────────────────────────────────────────────
-# 7. UPDATE NODE DEPS (safe: wanted versions only)
-# ─────────────────────────────────────────────────
-echo ""
-echo "[7/8] Updating Node dependencies (safe/wanted versions)..."
-cd /var/www/cortexbuild-ultimate
-
-# Only update to wanted versions (semver-compatible), not latest
-npm update --save 2>&1 | tail -10
-echo "  ✓ Node dependencies updated to wanted versions"
-
-# ─────────────────────────────────────────────────
-# 8. RESTART SERVICES
-# ─────────────────────────────────────────────────
-echo ""
-echo "[8/8] Restarting services..."
-
-# Recreate containers with updated images
-cd /var/www/cortexbuild-ultimate
-docker compose up -d 2>&1 | tail -10
-
-# Restart PM2 app
-pm2 restart cortex-api 2>/dev/null || true
-
-# Reload nginx
-nginx -t 2>&1 && nginx -s reload 2>&1
-
-echo "  ✓ Services restarted"
-
-# ─────────────────────────────────────────────────
-# FINAL STATUS
-# ─────────────────────────────────────────────────
-echo ""
-echo "============================================"
-echo "  Update Complete! Final Status:"
-echo "============================================"
-echo ""
-echo "Disk usage:"
-df -h / | tail -1
-echo ""
-echo "Docker containers:"
-docker ps --format "  {{.Names}}: {{.Status}}" 2>/dev/null
-echo ""
-echo "PM2:"
-pm2 jlist 2>/dev/null | python3 -c "import json,sys; d=json.load(sys.stdin); [print(f'  {p[\"name\"]}: {p[\"pm2_env\"][\"status\"]}') for p in d]" 2>/dev/null || pm2 list 2>/dev/null
-echo ""
-echo "Ollama models:"
-curl -s --max-time 3 http://127.0.0.1:11434/api/tags | python3 -c "import json,sys; [print(f'  {m[\"name\"]}') for m in json.load(sys.stdin).get('models',[])]" 2>/dev/null
+  *)
+    die "Unknown option: $MODE (use --check, --apply-os-updates, or --help)."
+    ;;
+esac
